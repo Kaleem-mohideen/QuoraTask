@@ -1,0 +1,146 @@
+[
+  {
+    "model": "quora.Post",
+    "pk": 1,
+    "fields": {
+      "title": "My Updated Post",
+      "content": "My first updated post!\r\n\r\nThis is exciting!",
+      "author": 1
+    }
+  },
+  {
+    "model": "quora.Post",
+    "pk": 2,
+    "fields": {
+      "title": "A Second Post",
+      "content": "This is a post from a different user...",
+      "author": 2
+    }
+  },
+  {
+    "model": "quora.Post",
+    "pk": 3,
+    "fields": {
+      "title": "Top 5 Programming Lanaguages",
+      "content": "Choosing the right programming language can be challenging! Here's our breakdown of the top 5 languages every developer should learn:\n\n1. Python - Great for beginners and AI development\n2. JavaScript - Essential for web development\n3. Java - Robust enterprise applications\n4. C++ - High-performance systems\n5. Go - Modern concurrent programming",
+      "author": 1
+    }
+  },
+  {
+    "model": "quora.Post",
+    "pk": 4,
+    "fields": {
+      "title": "Sublime Text Tips and Tricks",
+      "content": "Boost your coding efficiency with these Sublime Text features:\n\n- Multiple Selections: Use Ctrl+D to select repeated instances\n- Command Palette: Ctrl+Shift+P for quick access\n- Split Editing: View files side-by-side\n- Custom Shortcuts: Modify key bindings\n- Package Control: Expand functionality with plugins",
+      "author": 1
+    }
+  },
+  {
+    "model": "quora.Post",
+    "pk": 5,
+    "fields": {
+      "title": "Best Python IDEs",
+      "content": "Top integrated development environments for Python:\n\n1. PyCharm - Full-featured professional IDE\n2. VS Code - Lightweight with great extensions\n3. Jupyter Notebook - Ideal for data science\n4. Spyder - Scientific development\n5. Thonny - Perfect for beginners",
+      "author": 1
+    }
+  },
+  {
+    "model": "quora.Post",
+    "pk": 6,
+    "fields": {
+      "title": "Flask vs Django - Which Is Better?",
+      "content": "Comparing Python's popular web frameworks:\n\nFlask:\n- Microframework\n- Flexible structure\n- Ideal for small projects\n\nDjango:\n- Batteries-included\n- ORM & Admin panel\n- Best for complex applications\n\nChoose Flask for simplicity, Django for full-stack needs.",
+      "author": 2
+    }
+  },
+  {
+    "model": "quora.Post",
+    "pk": 7,
+    "fields": {
+      "title": "You Won't Believe These Clickbait Titles!",
+      "content": "Discover the secrets behind viral headlines:\n\n- Use numbers and lists\n- Create curiosity gaps\n- Promise quick solutions\n- Leverage FOMO (Fear of Missing Out)\n- Ask provocative questions",
+      "author": 2
+    }
+  },
+  {
+    "model": "quora.Post",
+    "pk": 9,
+    "fields": {
+      "title": "List of PyCon 2018 Talks",
+      "content": "Notable PyCon 2018 presentations:\n\n- Keynote: The Future of Python\n- AsyncIO in Practice\n- Machine Learning with Scikit-Learn\n- Python in Education\n- Optimizing Django Performance",
+      "author": 1
+    }
+  },
+  {
+    "model": "quora.Post",
+    "pk": 10,
+    "fields": {
+      "title": "How Office Pets in the Workplace Boosts Productivity",
+      "content": "Benefits of workplace animals:\n\n- Stress reduction\n- Increased employee interaction\n- Improved work-life balance\n- Boosted creativity\n- Enhanced office morale",
+      "author": 1
+    }
+  },
+  {
+    "model": "quora.Post",
+    "pk": 11,
+    "fields": {
+      "title": "The Best Programming Podcasts",
+      "content": "Top audio shows for developers:\n\n1. CodeNewbie - For beginners\n2. Software Engineering Daily\n3. Python Bytes\n4. JS Party - JavaScript focus\n5. Command Line Heroes",
+      "author": 1
+    }
+  },
+  {
+    "model": "quora.Post",
+    "pk": 12,
+    "fields": {
+      "title": "Tips for Public Speaking",
+      "content": "Master technical presentations:\n\n- Practice with time limits\n- Use visual aids effectively\n- Engage with audience questions\n- Simplify complex concepts\n- Record and review your talks",
+      "author": 2
+    }
+  },
+  {
+    "model": "quora.Post",
+    "pk": 13,
+    "fields": {
+      "title": "Best Programmers Throughout History",
+      "content": "Historical figures in computer science:\n\n- Ada Lovelace: First programmer\n- Alan Turing: Computing theory\n- Grace Hopper: COBOL creator\n- Dennis Ritchie: C language\n- Guido van Rossum: Python creator",
+      "author": 2
+    }
+  },
+  {
+    "model": "quora.Post",
+    "pk": 14,
+    "fields": {
+      "title": "How To Create A YouTube Channel",
+      "content": "Steps to launch your tech channel:\n\n1. Find your niche\n2. Invest in good audio quality\n3. Create consistent content\n4. Optimize video SEO\n5. Engage with your community",
+      "author": 2
+    }
+  },
+  {
+    "model": "quora.Post",
+    "pk": 15,
+    "fields": {
+      "title": "How I Record My Videos",
+      "content": "My recording equipment:\n\n- DSLR camera with clean HDMI\n- Lapel microphone\n- Ring light setup\n- Teleprompter app\n- 4K video editing workstation",
+      "author": 1
+    }
+  },
+  {
+    "model": "quora.Post",
+    "pk": 16,
+    "fields": {
+      "title": "Python and Physics",
+      "content": "Python's role in physics and research:\n\n- NumPy for numerical analysis\n- SciPy for scientific algorithms\n- Matplotlib for data visualization\n- Jupyter for interactive notebooks\n- SymPy for symbolic mathematics",
+      "author": 1
+    }
+  },
+  {
+    "model": "quora.Post",
+    "pk": 17,
+    "fields": {
+      "title": "Just A Few More Healines Should Do It",
+      "content": "Effective title formulas:\n\n- How to [Achieve Result] in [Time]\n- X Ways to [Solve Problem]\n- The Ultimate Guide to [Topic]\n- [Number] [Topic] Mistakes to Avoid\n- Why [Common Belief] is Wrong",
+      "author": 1
+    }
+  }
+]
