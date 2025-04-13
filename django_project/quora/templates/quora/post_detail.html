@@ -1,0 +1,84 @@
+{% extends "quora/base.html" %}
+{% block content %}
+  <article class="media content-section">
+    <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}">
+    <div class="media-body">
+      <div class="article-metadata">
+        <a class="mr-2" href="{% url 'user-posts' object.author.username %}">{{ object.author }}</a>
+        <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small>
+        {% if object.author == user %}
+          <div>
+            <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Update</a>
+            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete</a>
+          </div>
+        {% endif %}
+      </div>
+      <h2 class="article-title">{{ object.title }}</h2>
+      <p class="article-content">{{ object.content }}</p>
+    </div>
+  </article>
+  <hr>
+  {% for answer in answers %}
+    <div class="card my-3">
+        <div class="card-body">
+            <p>{{ answer.content }}</p>
+            <small>By {{ answer.author }} on {{ answer.date_posted }}</small>
+
+            <form class="like-answer-form mt-2" data-answer-id="{{ answer.id }}" method="POST">
+                {% csrf_token %}
+                👍 <span class="answer-like-count">{{ answer.likes.count }}</span>
+                {% if user in answer.likes.all %}
+                    <button type="submit" class="btn btn-sm btn-outline-danger">Unlike</button>
+                {% else %}
+                    <button type="submit" class="btn btn-sm btn-outline-primary">Like</button>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+  {% empty %}
+    <p>No answers yet. Be the first to reply!</p>
+  {% endfor %}
+
+  <hr>
+  {% if user.is_authenticated %}
+  <h4>Your Answer</h4>
+  <form method="post">
+    {% csrf_token %}
+    {{ answer_form.as_p }}
+    <button type="submit" class="btn btn-primary">Submit Answer</button>
+  </form>
+  {% else %}
+    <p><a href="{% url 'login' %}">Login</a> to answer this question.</p>
+  {% endif %}
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.like-answer-form').forEach(form => {
+        form.addEventListener('submit', async function (e) {
+          e.preventDefault();
+    
+          const answerId = this.dataset.answerId;
+          const likeBtn = this.querySelector('button');
+          const likeCountEl = this.querySelector('.answer-like-count');
+          const csrfToken = this.querySelector('[name=csrfmiddlewaretoken]').value;
+    
+          const response = await fetch(`/answer/${answerId}/like/`, {
+            method: 'POST',
+            headers: {
+              'X-CSRFToken': csrfToken,
+              'Accept': 'application/json',
+            }
+          });
+    
+          const data = await response.json();
+          likeCountEl.textContent = data.like_count;
+          likeBtn.textContent = data.liked ? 'Unlike' : 'Like';
+          likeBtn.className = data.liked
+            ? 'btn btn-sm btn-outline-danger'
+            : 'btn btn-sm btn-outline-primary';
+        });
+      });
+    });
+    </script>
+    
+{% endblock content %}
